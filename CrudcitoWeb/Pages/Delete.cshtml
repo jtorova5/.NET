@@ -1,0 +1,52 @@
+@page
+@model CrudcitoWeb.Pages.Delete
+@{
+    ViewData["Title"] = "DELETE";
+}
+
+<h1 class="text-white text-center mt-5">@ViewData["Title"]</h1>
+
+<table
+    class="table caption-top table-striped table-bordered table-sm align-middle text-center text-capitalize container">
+    <caption>List of coders</caption>
+    <thead>
+        <tr class="table-success">
+            <th scope="col">#</th>
+            <th scope="col">name</th>
+            <th scope="col">last Name</th>
+            <th scope="col">email</th>
+            <th scope="col">options</th>
+        </tr>
+    </thead>
+    <tbody class="table-group-divider">
+        <tr class="text-white">
+            <th scope="row">1</th>
+            <td>Jhonatan</td>
+            <td>Toro</td>
+            <td>jtorova5@gmail.com</td>
+            <td>
+                <button type="button" class="btn btn-danger btn-sm">Delete</button>
+            </td>
+        </tr>
+
+        <tr class="text-white">
+            <th scope="row">2</th>
+            <td>Mateo</td>
+            <td>Montoya</td>
+            <td>mateito@example.com</td>
+            <td>
+                <button type="button" class="btn btn-danger btn-sm">Delete</button>
+            </td>
+        </tr>
+
+        <tr class="text-white">
+            <th scope="row">3</th>
+            <td>Majito</td>
+            <td>Pinito</td>
+            <td>alpinito@example.com</td>
+            <td>
+                <button type="button" class="btn btn-danger btn-sm">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
