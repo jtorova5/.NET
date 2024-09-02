@@ -1,3 +1,4 @@
+using CrudcitoWeb.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
@@ -11,6 +12,8 @@ public class IndexModel : PageModel
     {
         _logger = logger;
     }
+
+    public IList<Coder> Coders { get;  set; }
 
     public void OnGet()
     {

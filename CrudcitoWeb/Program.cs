@@ -3,15 +3,16 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// conexión con la base de datos
-builder.Services.AddDbContext<AppDBContext>(options =>
-options.UseMySql(
-    builder.Configuration.GetConnectionString("Conexión con DB_crudcito"),
-    ServerVersion.Parse("8.0.20-mysql"))
-);
-
 // Add services to the container.
 builder.Services.AddRazorPages();
+
+// conexión con la base de datos
+builder.Services.AddDbContext<AppDBContext>(options =>
+{
+    options.UseMySql(builder.Configuration.GetConnectionString("ConexiónConDB_crudcito"),
+    ServerVersion.Parse("8.0.20-mysql"));
+}
+);
 
 var app = builder.Build();
 

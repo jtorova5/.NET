@@ -1,7 +1,11 @@
-﻿@page
+﻿
+@page
 @model IndexModel
+
+
 @{
     ViewData["Title"] = "CODERS";
+    var list = Model.Coders.ToList();
 }
 
 <h1 class="text-white text-center mt-5">@ViewData["Title"]</h1>
@@ -18,25 +22,14 @@
         </tr>
     </thead>
     <tbody class="table-group-divider">
-        <tr class="text-white">
-            <th scope="row">1</th>
-            <td>Jhonatan</td>
-            <td>Toro</td>
-            <td>jtorova5@gmail.com</td>
-        </tr>
-
-        <tr class="text-white">
-            <th scope="row">2</th>
-            <td>Mateo</td>
-            <td>Montoya</td>
-            <td>mateito@example.com</td>
-        </tr>
-
-        <tr class="text-white">
-            <th scope="row">3</th>
-            <td>Majito</td>
-            <td>Pinito</td>
-            <td>alpinito@example.com</td>
-        </tr>
+        @foreach (var coder in list)
+        {
+            <tr class="text-white">
+                <th scope="row">@coder.Id</th>
+                <td>@coder.Name</td>
+                <td>@coder.LastName</td>
+                <td>@coder.Email</td>
+            </tr>
+        }
     </tbody>
 </table>
